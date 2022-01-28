@@ -27,4 +27,4 @@ const DayList = (props) => {
     )
 }
 
-export default DayList
+export default DayList;
