@@ -14,6 +14,7 @@ import Appointment from "components/Appointment/index.js";
 import Appointment from "components/Appointment/Header.js";
 import Appointment from "components/Appointment/Empty.js";
 import Appointment from "components/Appointment/Show.js";
+import Appointment from "components/Appointment/Confirm.js";
 
 storiesOf("Button", module)
   .addParameters({
@@ -150,3 +151,7 @@ storiesOf("InterviewerListItem", module)
           student={"Lydia Miller-Jones"} interviewer={interviewers[1].name} 
           />
   ))
+  .add("Confirm", () => (
+    <Confirm Cancel={action("Cancel")}
+  Confirm={action("Confirm")} />
+))
