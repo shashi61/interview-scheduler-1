@@ -10,20 +10,20 @@ const InterviewerList = (props) => {
         return (
             <ul key={interviewerListItem.id} >
                 <InterviewerListItem
-                    key={interviewerListItem.id}
-                    name={interviewerListItem.name}
-                    avatar={interviewerListItem.avatar}
-                    selected={interviewerListItem.id === props.interviewer}
-                    setInterviewer={(event) => props.setInterviewer(interviewerListItem.id)} 
+                    key={interviewer.id}
+                    name={interviewer.name}
+                    avatar={interviewer.avatar}
+                    selected={interviewer.id === value}
+                    setInterviewer={() => onChange(interviewer.id)}
                 />
             </ul>)
 
     });
-    return(
-    <section className="interviewers">
-        <h4 className="interviewers__header text--light">Interviewer</h4>
-        <ul className="interviewers__list">{ parsedInterviewersListItems }</ul>
-    </section>
+    return (
+        <section className="interviewers">
+            <h4 className="interviewers__header text--light">Interviewer</h4>
+            <ul className="interviewers__list">{parsedInterviewersListItems}</ul>
+        </section>
     );
 }
 

@@ -13,9 +13,9 @@ const DayList = (props) => {
                     key={dayListItem.id}
                     name={dayListItem.name}
                     spots={dayListItem.spots}
-                    selected={dayListItem.name === props.day}
+                    selected={dayListItem.name === props.value}
                     // setDay={props.onChange}
-                    setDay={props.setDay} 
+                    setDay={props.onChange} 
                 />
             </ul>)
 
