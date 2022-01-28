@@ -1,5 +1,5 @@
 import React from 'react';
-import "src/components/Appointment/styles.scss";
+import "components/Appointment/styles.scss";
 
 const Appointment = (props) => {
 

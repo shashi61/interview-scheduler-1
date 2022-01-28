@@ -5,16 +5,16 @@ import "components/InterviewerList.scss";
 const InterviewerList = (props) => {
 
     const arrayOfInterviewers = props.interviewers;
-    const parsedInterviewersListItems = arrayOfInterviewers.map(interviewerListItem => {
+    const parsedInterviewersListItems = arrayOfInterviewers.map(interviewer => {
 
         return (
-            <ul key={interviewerListItem.id} >
+            <ul key={interviewer.id} >
                 <InterviewerListItem
                     key={interviewer.id}
                     name={interviewer.name}
                     avatar={interviewer.avatar}
-                    selected={interviewer.id === value}
-                    setInterviewer={() => onChange(interviewer.id)}
+                    selected={interviewer.id === props.value}
+                    setInterviewer={() => props.onChange(interviewer.id)}
                 />
             </ul>)
 
