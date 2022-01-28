@@ -8,7 +8,7 @@ const InterviewerListItem = (props) => {
       interviewerClass += " interviewers__item--selected";
    }
     return (
-        <li className={interviewerClass} onClick={() => props.setInterviwer(props.id)} selected={props.selected} >
+        <li className={interviewerClass} onClick={props.setInterviewer} selected={props.selected} >
             <img
                 className="interviewers__item-image"
                 src={props.avatar}

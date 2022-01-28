@@ -13,8 +13,8 @@ const InterviewerList = (props) => {
                     key={interviewerListItem.id}
                     name={interviewerListItem.name}
                     avatar={interviewerListItem.avatar}
-                    selected={interviewerListItem.id === props.id}
-                    setInterviewer={props.setInterviewer} 
+                    selected={interviewerListItem.id === props.interviewer}
+                    setInterviewer={(event) => props.setInterviewer(interviewerListItem.id)} 
                 />
             </ul>)
 
