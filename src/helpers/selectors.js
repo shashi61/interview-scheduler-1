@@ -1,3 +1,4 @@
+
 function getAppointmentsForDay(state, day) {
     let dayObject = state.days.find((dayElem) => dayElem.name === day);
   
@@ -11,8 +12,28 @@ function getAppointmentsForDay(state, day) {
     });
     return appointments;
 }
+function getInterview(state, interview) {
+    let interviewObject;
+  
+    if (interview === null) {
+      return null;
+    } else {
+      for (let key in state.interviewers) {
+        if (interview.interviewer === state.interviewers[key].id) {
+          interviewObject = {
+            student: interview.student,
+            interviewer: state.interviewers[key],
+          };
+        }
+      }
+    }
+  
+    return interviewObject;
+  }
+  
 
-export default getAppointmentsForDay;
+export
+ {getAppointmentsForDay, getInterview};
 
 
 
